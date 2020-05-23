@@ -1,0 +1,34 @@
+{
+  "name": "@yurikrupnik/button-list",
+  "version": "1.0.1",
+  "description": "> TODO: description",
+  "author": "yurikrupnik <krupnik.yuri@gmail.com>",
+  "homepage": "https://github.com/yurikrupnik/guildwars/tree/master/packages/button-list#readme",
+  "license": "ISC",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurikrupnik/guildwars.git",
+    "directory": "packages/ui/button-list"
+  },
+  "scripts": {
+    "start": "rollup --config=../../../rollup.config.js -w",
+    "prebuild": "rimraf dist",
+    "lint": "eslint src --ext .js,.jsx --color",
+    "test": "jest src --colors",
+    "build": "rollup --config=../../../rollup.config.js",
+    "tsc": "tsc",
+    "patch": "npm version patch && npm publish"
+  },
+  "bugs": {
+    "url": "https://github.com/yurikrupnik/guildwars/issues"
+  }
+}

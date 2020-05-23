@@ -1,0 +1,58 @@
+{
+  "name": "@yurikrupnik/button",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "yurikrupnik <krupnik.yuri@gmail.com>",
+  "homepage": "https://github.com/yurikrupnik/guildwars/tree/master/packages/button#readme",
+  "license": "ISC",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurikrupnik/guildwars.git",
+    "directory": "packages/ui/button"
+  },
+  "scripts": {
+    "start": "rollup --config=../../../rollup.config.js -w",
+    "prebuild": "rimraf dist",
+    "lint": "eslint src --ext .js,.jsx --color",
+    "test": "jest src --colors",
+    "build": "rollup --config=../../../rollup.config.js",
+    "tsc": "tsc",
+    "patch": "npm version patch && npm publish"
+  },
+  "bugs": {
+    "url": "https://github.com/yurikrupnik/guildwars/issues"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@storybook/react": "^5.3.18",
+    "@testing-library/react": "^9.3.3",
+    "identity-obj-proxy": "^3.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "ts-jest": "^26.0.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.7.0"
+  }
+}
